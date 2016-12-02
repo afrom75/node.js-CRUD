@@ -1,0 +1,18 @@
+extends layout
+
+link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css")
+
+block content
+    div.container
+        h2 Se connecter
+        form(action='/signin', method='POST')
+            div.form-group
+                label Email
+                input#email.form-control(name = 'email')
+            div.form-group
+                label Mot de passe
+                input#password.form-control(name = 'password', type='password')
+            input.btn.btn-primary.btn-lg.btn-block(type='submit', value='Se connecter')
+            div &nbsp;
+        a.btn.btn-secondary.btn-lg.btn-block(href='/') Créer un compte
+    block chat

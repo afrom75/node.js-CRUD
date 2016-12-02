@@ -1,0 +1,41 @@
+.navbar{
+    background: #f7f7f7;
+}
+
+.block-content{
+    padding: 15px;
+}
+
+.ul.li.nav-item.active{
+    background-color: #cccccc;
+    border-color: #cccccc;
+    color: #fff;
+}
+
+.navbar ul li a{
+    color: #7;
+    padding-right: 25px;
+}
+
+.navbar{
+    height: 55px;
+    line-height: 40px;
+}
+
+input.custom-control{
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+
+ul{
+    -webkit-padding-start: 0;
+}

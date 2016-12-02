@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    div.container
+        div &nbsp;
+        a.btn.btn-primary.btn-lg(href="/cars/add") Ajouter un véhicule
+        div &nbsp;
+        table.table.table-hover
+            thead
+                tr
+                    th Brand
+                    th Km
+                    th createdAt
+                    th updatedAt
+                    th actions
+            tbody
+                each car, index in cars
+                    tr
+                        td #{car.brand}
+                        td #{car.km}
+                        td #{car.createdAt}
+                        td #{car.updatedAt}
+                        td
+                            a.btn.btn-primary.btn-sm(href='/cars/' + car.id) Editer
+                            span &nbsp;
+                            a(href='/cars/' + car.id + '?_method=DELETE') Supprimer
+
+

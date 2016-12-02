@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+    div.container
+        h2 Ajouter un véhicule
+        if !car
+            form(action='/cars/add', method='POST')
+                div.form-group
+                    label Brand
+                    input#brand.form-control(name = 'brand')
+                div.form-group
+                    label Kilométrage
+                    input#km.form-control(name = 'km')
+
+                input.btn.btn-primary.btn-lg.btn-block(type='submit', value='Ajouter le véhicule')
+        else
+            form(action='/cars/' + car.id, method='POST')
+                div.form-group
+                    label Brand
+                    input#brand.form-control(name = 'brand', value=car.brand)
+                div.form-group
+                    label Kilométrage
+                    input#km.form-control(name = 'km', value=car.km)
+
+
+                input.btn.btn-primary.btn-lg.btn-block(type='submit', value='Ajouter le véhicule')

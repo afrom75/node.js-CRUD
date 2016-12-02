@@ -1,0 +1,23 @@
+link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css")
+
+block content
+  div.container
+
+    h2 Créer un compte
+    if message
+      div.alert.alert-danger #{message}
+    form(action='/users/create/', method='POST')
+      div.form-group
+        label Email
+        input#email.form-control(name = 'email')
+      div.form-group
+        label Mot de passe
+        input#password.form-control(name = 'password', type='password')
+      div.form-group
+        label Confirmer votre mot de passe
+        input#confirmPassword.form-control(name = 'confirmPassword', type='password')
+
+
+      input.btn.btn-primary.btn-lg.btn-block(type='submit', value='S\'inscrire')
+      a.btn.btn-secondary.btn-lg.btn-block(href='/signin') Espace de connexion
+

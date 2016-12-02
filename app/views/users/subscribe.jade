@@ -1,0 +1,48 @@
+extends ../layout
+
+block content
+    div.container
+        br
+        if user
+            h2 Editer l'utilisateur
+
+            form(action='/users/edit/' + user._id, method='POST')
+                div.form-group
+                    label Nom
+                    input#firstname.form-control(name = 'firstname', value=user.firstname)
+                div.form-group
+                    label Prénom
+                    input#name.form-control(name = 'name', value=user.name)
+                div.form-group
+                    label Age
+                    input#age.form-control(name = 'age', value=user.age)
+                div.form-group
+                    label Email
+                    input#email.form-control(name = 'email', value=user.email)
+                div.form-group
+                    label Ville
+                    input#ville.form-control(name = 'ville', value=user.ville)
+
+                input.btn.btn-primary(type='submit', value='Enregistrer')
+                a.btn.btn-default(href='/users') Retour
+        else
+            h2 Ajout un utilisateur
+            form(action='/users/subscribe/', method='POST')
+                div.form-group
+                    label Nom
+                    input#firstname.form-control(name = 'firstname')
+                div.form-group
+                    label Prénom
+                    input#name.form-control(name = 'name')
+                div.form-group
+                    label Age
+                    input#age.form-control(name = 'age')
+                div.form-group
+                    label Email
+                    input#email.form-control(name = 'email')
+                div.form-group
+                    label Ville
+                    input#ville.form-control(name = 'ville')
+
+                input.btn.btn-primary(type='submit', value='Ajouter')
+                a.btn.btn-default(href='/users') Retour

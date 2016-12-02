@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    div.container
+        div.jumbotron.jumbotron-fluid
+            div.container
+                h1.display-1 #{user.firstname}  #{user.name}
+        p
+            u Son age:
+            span  #{user.age}
+        p
+            u Son adresse mail:
+            span  #{user.email}
+        p
+            u Sa ville:
+            span  #{user.ville}
+
+        a.btn.btn-primary(href="/users") Liste des utilisateurs
